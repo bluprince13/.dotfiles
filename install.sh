@@ -224,6 +224,7 @@ require_cask font-inconsolata-for-powerline
 require_cask font-roboto-mono
 require_cask font-roboto-mono-for-powerline
 require_cask font-source-code-pro
+require_cask font-meslo-for-powerline
 ok
 
 if [[ -d "/Library/Ruby/Gems/2.0.0" ]]; then
