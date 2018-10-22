@@ -1,0 +1,83 @@
+{
+	// OVERALL
+	"sync.gist": "6609862d535743e075090db8f2efa450",
+	"files.autoSave": "afterDelay",
+	"workbench.colorTheme": "One Dark Pro",
+	"workbench.sideBar.location": "left",
+	"editor.lineNumbers": "relative",
+	"editor.formatOnSave": true,
+	"editor.minimap.enabled": false,
+	// TERMINAL
+	"terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
+    "terminal.integrated.fontSize": 14,
+	"terminal.external.osxExec": "iTerm.app",
+	// GIT
+	"git.confirmSync": false,
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+	// PRETTIER
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true,
+	// KITE
+	"kite.editorMetricsEnabled": "no",
+	"kite.showDocsNotificationOnStartup": false,
+	// VIM
+	"vim.easymotion": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["j", "j"],
+			"after": ["<esc>"]
+		}
+	],
+	// LATEX
+	"latex-workshop.latex.autoBuild.onSave.enabled": true,
+	"latex-workshop.view.pdf.viewer": "tab",
+	"latex-workshop.latex.tools": [
+		{
+			"name": "latexmk",
+			"command": "latexmk",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"%DOC%"
+			]
+		},
+		{
+			"name": "pdflatex",
+			"command": "pdflatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"%DOC%"
+			]
+		},
+		{
+			"name": "bibtex",
+			"command": "bibtex",
+			"args": ["%DOCFILE%"]
+		},
+		{
+			"name": "lualatex",
+			"command": "lualatex",
+			"args": ["-synctex=1", "-interaction=nonstopmode", "%DOC%"]
+		}
+	],
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "latexmk",
+			"tools": ["latexmk"]
+		},
+		{
+			"name": "pdflatex -> bibtex -> pdflatex*2",
+			"tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+		},
+		{
+			"name": "lualatex",
+			"tools": ["lualatex"]
+		}
+	],
+}
