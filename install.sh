@@ -273,6 +273,13 @@ fi
 unlink $file > /dev/null 2>&1
 # create the link
 ln -s ~/.dotfiles/vscode/settings.json $file 
+
+# add VS Code to your path
+cat << EOF >> ~/.bash_profile
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
+
 echo -en '\tlinked';ok
 
 running "cleanup homebrew"
