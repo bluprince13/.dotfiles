@@ -261,6 +261,20 @@ bot "installing packages from config.js..."
 node index.js
 ok
 
+bot "applying vscode settings..."
+file=~"/Library/Application Support/Code/User/settings.json"
+# if the file exists:
+if [[ -e $file ]]; then
+    mkdir -p ~/.dotfiles_backup/$now
+    mv $file ~/.dotfiles_backup/$now/settings.json
+    echo "backup saved as ~/.dotfiles_backup/$now/settings.json"
+fi
+# symlink might still exist
+unlink $file > /dev/null 2>&1
+# create the link
+ln -s ~/.dotfiles/vscode/settings.json $file 
+echo -en '\tlinked';ok
+
 running "cleanup homebrew"
 brew cleanup > /dev/null 2>&1
 ok
