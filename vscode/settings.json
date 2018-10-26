@@ -2,7 +2,7 @@
 	// OVERALL
 	"sync.gist": "6609862d535743e075090db8f2efa450",
 	"files.autoSave": "afterDelay",
-	"workbench.colorTheme": "One Dark Pro",
+	"workbench.colorTheme": "Solarized Dark",
 	"workbench.sideBar.location": "left",
 	"editor.lineNumbers": "relative",
 	"editor.formatOnSave": true,
@@ -10,7 +10,7 @@
 	// TERMINAL
 	"terminal.integrated.shell.osx": "/bin/zsh",
     "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 12,
 	"terminal.external.osxExec": "iTerm.app",
 	// GIT
 	"git.confirmSync": false,
