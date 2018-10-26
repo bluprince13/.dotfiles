@@ -16,7 +16,17 @@ if [[ $(print -P "%#") =~ "#" ]]; then
 fi
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=’red’
+
+# Limit to the last two folders
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+
+# Advanced `vcs` color customization
+POWERLEVEL9K_VCS_FOREGROUND='blue'
+POWERLEVEL9K_VCS_DARK_FOREGROUND='black'
+POWERLEVEL9K_VCS_BACKGROUND='green'
+# If VCS changes are detected:
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='cyan'
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
