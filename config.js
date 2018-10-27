@@ -59,6 +59,7 @@ module.exports = {
     //'ireadfast',
     'iterm2',
     'little-snitch',
+    'mactex',
     'macbreakz',
     'micro-snitch',
     'signal',
