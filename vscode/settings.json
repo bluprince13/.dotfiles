@@ -4,7 +4,6 @@
 	"files.autoSave": "afterDelay",
 	"workbench.colorTheme": "Solarized Dark",
 	"workbench.sideBar.location": "left",
-	"editor.lineNumbers": "relative",
 	"editor.formatOnSave": true,
 	"editor.minimap.enabled": false,
 	// TERMINAL
@@ -16,12 +15,6 @@
 	"git.confirmSync": false,
 	"git.autofetch": true,
 	"git.enableSmartCommit": true,
-	// PRETTIER
-	"prettier.singleQuote": true,
-	"prettier.useTabs": true,
-	// KITE
-	"kite.editorMetricsEnabled": "no",
-	"kite.showDocsNotificationOnStartup": false,
 	// VIM
 	"vim.easymotion": true,
 	"vim.insertModeKeyBindings": [
@@ -62,11 +55,15 @@
 		},
 		{
 			"name": "lualatex",
-			"command": "lualatex",
+			"command":"lualatex",
 			"args": ["-synctex=1", "-interaction=nonstopmode", "%DOC%"]
-		}
-	],
+		} 
+	],	
 	"latex-workshop.latex.recipes": [
+		{
+			"name": "lualatex",
+			"tools": ["lualatex"]
+		},	
 		{
 			"name": "latexmk",
 			"tools": ["latexmk"]
@@ -75,9 +72,39 @@
 			"name": "pdflatex -> bibtex -> pdflatex*2",
 			"tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
 		},
-		{
-			"name": "lualatex",
-			"tools": ["lualatex"]
-		}
 	],
+	"latex-workshop.message.update.show": false,
+	"latex-workshop.latex.clean.enabled": true,
+	"latex-workshop.latex.clean.fileTypes": [
+		"*.aux",
+		"*.bbl",
+		"*.blg",
+		"*.idx",
+		"*.ind",
+		"*.lof",
+		"*.lot",
+		"*.out",
+		"*.toc",
+		"*.acn",
+		"*.acr",
+		"*.alg",
+		"*.glg",
+		"*.glo",
+		"*.gls",
+		"*.gz",
+		"*.ist",
+		"*.fls",
+		"*.log",
+		"*.fdb_latexmk",
+		"*temp.tex"
+	],
+	"latex-workshop.latex.autoClean.run": "onBuilt",
+	"latex-workshop.latex.autoBuild.run": "onFileChange",
+	// General
+	"todohighlight.isEnable": true,
+	"code-runner.runInTerminal": true,  // bugfix since code runner doesn't use venv by default
+	// Styling
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"rewrap.autoWrap.enabled": true,
 }
