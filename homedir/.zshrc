@@ -1,32 +1,14 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-######################################################
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f" # Add a space in the first prompt
-# Visual customisation of the second prompt line
-local user_symbol="$"
-if [[ $(print -P "%#") =~ "#" ]]; then
-    user_symbol = "#"
-fi
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbol%{%b%f%k%F{yellow}%} %{%f%}"
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-
-# Limit to the last two folders
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-
-# Advanced `vcs` color customization
-POWERLEVEL9K_VCS_FOREGROUND='blue'
-POWERLEVEL9K_VCS_DARK_FOREGROUND='black'
-POWERLEVEL9K_VCS_BACKGROUND='green'
-# If VCS changes are detected:
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='cyan'
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -82,8 +64,12 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  bgnotify
   git
+  history-substring-search
   zsh-autosuggestions
+  z
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias code="code-insiders"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -126,3 +113,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
