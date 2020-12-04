@@ -1,110 +1,340 @@
 {
-	// OVERALL
-	"sync.gist": "6609862d535743e075090db8f2efa450",
-	"files.autoSave": "afterDelay",
-	"workbench.colorTheme": "Solarized Dark",
-	"workbench.sideBar.location": "left",
-	"editor.formatOnSave": true,
-	"editor.minimap.enabled": false,
-	// TERMINAL
-	"terminal.integrated.shell.osx": "/bin/zsh",
-    "terminal.integrated.fontFamily": "Meslo LG M for Powerline",
-    "terminal.integrated.fontSize": 12,
-	"terminal.external.osxExec": "iTerm.app",
-	// GIT
-	"git.confirmSync": false,
-	"git.autofetch": true,
-	"git.enableSmartCommit": true,
-	// VIM
-	"vim.easymotion": true,
-	"vim.insertModeKeyBindings": [
-		{
-			"before": ["j", "j"],
-			"after": ["<esc>"]
-		}
-	],
-	// LATEX
-	"latex-workshop.latex.autoBuild.onSave.enabled": true,
-	"latex-workshop.view.pdf.viewer": "tab",
-	"latex-workshop.latex.tools": [
-		{
-			"name": "latexmk",
-			"command": "latexmk",
-			"args": [
-				"-synctex=1",
-				"-interaction=nonstopmode",
-				"-file-line-error",
-				"-pdf",
-				"%DOC%"
-			]
-		},
-		{
-			"name": "pdflatex",
-			"command": "pdflatex",
-			"args": [
-				"-synctex=1",
-				"-interaction=nonstopmode",
-				"-file-line-error",
-				"%DOC%"
-			]
-		},
-		{
-			"name": "bibtex",
-			"command": "bibtex",
-			"args": ["%DOCFILE%"]
-		},
-		{
-			"name": "lualatex",
-			"command":"lualatex",
-			"args": ["-synctex=1", "-interaction=nonstopmode", "%DOC%"]
-		} 
-	],	
-	"latex-workshop.latex.recipes": [
-		{
-			"name": "lualatex",
-			"tools": ["lualatex"]
-		},	
-		{
-			"name": "latexmk",
-			"tools": ["latexmk"]
-		},
-		{
-			"name": "pdflatex -> bibtex -> pdflatex*2",
-			"tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
-		},
-	],
-	"latex-workshop.message.update.show": false,
-	"latex-workshop.latex.clean.enabled": true,
-	"latex-workshop.latex.clean.fileTypes": [
-		"*.aux",
-		"*.bbl",
-		"*.blg",
-		"*.idx",
-		"*.ind",
-		"*.lof",
-		"*.lot",
-		"*.out",
-		"*.toc",
-		"*.acn",
-		"*.acr",
-		"*.alg",
-		"*.glg",
-		"*.glo",
-		"*.gls",
-		"*.gz",
-		"*.ist",
-		"*.fls",
-		"*.log",
-		"*.fdb_latexmk",
-		"*temp.tex"
-	],
-	"latex-workshop.latex.autoClean.run": "onBuilt",
-	"latex-workshop.latex.autoBuild.run": "onFileChange",
-	// General
-	"todohighlight.isEnable": true,
-	"code-runner.runInTerminal": true,  // bugfix since code runner doesn't use venv by default
-	// Styling
-	"prettier.tabWidth": 4,
-	"prettier.useTabs": true,
-	"rewrap.autoWrap.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "atlascode.jira.jqlList": [
+    {
+      "enabled": true,
+      "id": "c35c6947-f8b8-4fce-bdf8-39438ee359cb",
+      "monitor": true,
+      "name": "My bluprince13 Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "044efeea-d945-4a06-895d-a64f8ad9c6c6"
+    }
+  ],
+  "aws.onDefaultRegionMissing": "add",
+  "aws.profile": "profile:default",
+  "breadcrumbs.enabled": false,
+  "browser-preview.startUrl": "https://google.co.uk",
+  "cSpell.language": "en,es",
+  "cSpell.userWords": [
+    "AVPK",
+    "Coverlay",
+    "Dhabi",
+    "Encyption",
+    "IIRC",
+    "INFJ",
+    "INTJ",
+    "JIRA",
+    "Microservice",
+    "Prefetch",
+    "Stratford",
+    "adis",
+    "airbnb",
+    "awsui",
+    "bluprince",
+    "docdb",
+    "figcaption",
+    "flask",
+    "gatedgarden",
+    "jsonify",
+    "lightsteelblue",
+    "noiseviz",
+    "noreferrer",
+    "pageview",
+    "readonly",
+    "roboto",
+    "steelblue",
+    "stepfunctions",
+    "useinterval",
+    "vipinajayakumar",
+    "webp"
+  ],
+  "code-runner.executorMap": {
+    "go": "go run",
+    "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+    "javascript": "node",
+    "perl": "perl",
+    "python": "python3"
+  },
+  "code-runner.ignoreSelection": true,
+  "code-runner.runInTerminal": true,
+  "debug.node.autoAttach": "off",
+  "debug.toolBarLocation": "docked",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorWidth": 5,
+  "editor.fontFamily": "Dank Mono, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80
+  ],
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "on",
+  "editor.wordWrap": "on",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "files.autoSave": "afterDelay",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    ".viceroy": true,
+    "apollo-overrides": true,
+    "build": true,
+    "env": true,
+    "packageInfo*": true,
+    "release-info": true,
+    "src/*/build": false
+  },
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true,
+    "**/build/**": true,
+    "**/node_modules/**": true
+  },
+  "git-graph.dialog.merge.squashCommits": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/Users/vipinaj/.vscode-insiders/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "java.requirements.JDK11Warning": false,
+  "java.semanticHighlighting.enabled": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "jest.pathToJest": "npm test --",
+  "jest.runAllTestsFirst": false,
+  "jest.showCoverageOnLoad": true,
+  "jestTestExplorer.pathToJest": "npm test --",
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "jupyter.insidersChannel": "off",
+  "kite.showWelcomeNotificationOnStartup": false,
+  "latex-workshop.latex.autoBuild.onSave.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.enabled": true,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.gz",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*temp.tex"
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "lualatex",
+      "tools": [
+        "lualatex"
+      ]
+    },
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ],
+      "command": "latexmk",
+      "name": "latexmk"
+    },
+    {
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "command": "pdflatex",
+      "name": "pdflatex"
+    },
+    {
+      "args": [
+        "%DOCFILE%"
+      ],
+      "command": "bibtex",
+      "name": "bibtex"
+    },
+    {
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "%DOC%"
+      ],
+      "command": "lualatex",
+      "name": "lualatex"
+    }
+  ],
+  "latex-workshop.message.update.show": false,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "local-history.path": "${workspaceFolder}/.vscode/.history",
+  "prettier.proseWrap": "always",
+  "prettier.tabWidth": 4,
+  "prettier.useTabs": true,
+  "projectManager.git.baseFolders": [
+    "/Volumes/workplace/",
+    "/Users/vipinajayakumar/Desktop/programming/git_repos"
+  ],
+  "python.formatting.provider": "black",
+  "python.insidersChannel": "off",
+  "python.languageServer": "Microsoft",
+  "python.pythonPath": "/usr/local/bin/python3",
+  "rewrap.autoWrap.enabled": true,
+  "search.exclude": {
+    "**/*.code-search": true,
+    "**/bower_components": true,
+    "**/node_modules": true,
+    "build": true,
+    "env": true,
+    "src/*/build": true
+  },
+  "settingsSync.ignoredExtensions": [
+    "marklel.vscode-brazil"
+  ],
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ],
+  "spellright.groupDictionaries": false,
+  "spellright.language": [
+    "en-GB"
+  ],
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "'SourceCodePro+Powerline+Awesome Regular'",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "todo-tree.tree.showScanModeButton": false,
+  "todohighlight.isEnable": true,
+  "viceroy.config.internal.lastUpdateTime": "2020-11-18T11:24:04.952Z",
+  "viceroy.config.internal.zeroDowntimeColour": "green",
+  "viceroy.config.lastVersion": "0.35.200839",
+  "viceroy.doc.welcome.showAtStartup": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 1,
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Night Owl",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.editorAssociations": [
+    {
+      "filenamePattern": "*.ipynb",
+      "viewType": "jupyter-notebook"
+    }
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": true,
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.statusBar.visible": true,
+  "yaml.customTags": [
+    "!And",
+    "!If",
+    "!Not",
+    "!Equals",
+    "!Or",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Join sequence"
+  ],
+  "yaml.format.enable": true,
+  "yaml.schemas": {
+    "file:///Users/vipinaj/.vscode-insiders/extensions/atlassian.atlascode-2.6.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.24.0/blue/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.26.1/blue/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.26.1/green/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.28.200595/blue/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.30.200679/blue/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.31.200710/blue/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.31.200738/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.33.200792/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.34.200824/assets/languages/rde/schema.json": "**/definition.yaml",
+    "file:///Users/vipinaj/.vscode/extensions/marklel.vscode-brazil-0.35.200839/assets/languages/rde/schema.json": "**/definition.yaml"
+  }
 }
