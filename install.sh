@@ -39,7 +39,7 @@ for file in .*; do
   # symlink might still exist
   unlink ~/$file > /dev/null 2>&1
   # create the link
-  ln -s ~/.dotfiles/homedir/$file ~/$file
+  ln -s ~/bluprince13/git_repos/.dotfiles/homedir/$file ~/$file
   echo -en '\tlinked';ok
 done
 
