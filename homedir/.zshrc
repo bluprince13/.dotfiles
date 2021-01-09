@@ -5,14 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.dotfiles/oh-my-zsh
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
 #######################################################
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -67,9 +65,10 @@ plugins=(
   bgnotify
   git
   history-substring-search
-  zsh-autosuggestions
-  z
-  zsh-syntax-highlighting
+  z 
+  # custom plugins
+  zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+  zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
 )
 
 source $ZSH/oh-my-zsh.sh
