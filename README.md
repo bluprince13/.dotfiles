@@ -14,6 +14,9 @@ Just run `install.sh` to copy all the dotfiles to your homedir and create symlin
 3. Install [powerlevel10k for oh-my-zsh](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 4. Install custom plugins defined in `.zshrc`.
 5. Install [night-owl theme](https://github.com/nickcernis/iterm2-night-owl)
+6. Install the following
+   1. [volta](https://volta.sh/)
+   2. `volta install node yarn`
 
 ## Set up VSCode
 
