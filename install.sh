@@ -17,12 +17,16 @@ if ! sudo grep -q "%wheel		ALL=(ALL) NOPASSWD: ALL #atomantic/dotfiles" "/etc/su
   sudo -v
 
   # Keep-alive: update existing sudo time stamp until the script has finished
-  while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+  while true; do
+    sudo -n true
+    sleep 60
+    kill -0 "$$" || exit
+  done 2>/dev/null &
 
 fi
 
 bot "creating symlinks for project dotfiles..."
-pushd homedir > /dev/null 2>&1
+pushd homedir >/dev/null 2>&1
 now=$(date +"%Y.%m.%d.%H.%M.%S")
 
 for file in .*; do
@@ -32,18 +36,18 @@ for file in .*; do
   running "~/$file"
   # if the file exists:
   if [[ -e ~/$file ]]; then
-      mkdir -p ~/.dotfiles_backup/$now
-      mv ~/$file ~/.dotfiles_backup/$now/$file
-      echo "backup saved as ~/.dotfiles_backup/$now/$file"
+    mkdir -p ~/.dotfiles_backup/$now
+    mv ~/$file ~/.dotfiles_backup/$now/$file
+    echo "backup saved as ~/.dotfiles_backup/$now/$file"
   fi
   # symlink might still exist
-  unlink ~/$file > /dev/null 2>&1
+  unlink ~/$file >/dev/null 2>&1
   # create the link
   ln -s ~/bluprince13/git_repos/.dotfiles/homedir/$file ~/$file
-  echo -en '\tlinked';ok
+  echo -en '\tlinked'
+  ok
 done
 
-popd > /dev/null 2>&1
-
+popd >/dev/null 2>&1
 
 bot "Woot! All done. Kill this terminal and launch iTerm"
