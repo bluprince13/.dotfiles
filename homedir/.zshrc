@@ -65,7 +65,7 @@ plugins=(
   bgnotify
   git
   history-substring-search
-  z 
+  z
   # custom plugins
   zsh-autosuggestions # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
   zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
@@ -102,6 +102,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias code="code-insiders"
+
+# Add work zshrc config if it exists
+if [ -f ~/bluprince13-work/.zshrc ]; then
+    source ~/bluprince13-work/.zshrc
+fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

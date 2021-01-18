@@ -29,8 +29,19 @@ bot "creating symlinks for project dotfiles..."
 pushd homedir >/dev/null 2>&1
 now=$(date +"%Y.%m.%d.%H.%M.%S")
 
+bot "Is this for work? I won't copy .gitconfig and .zprofile for your work environment. \n"
+read -r -p "Is this for work? [Y|n] " response
+if [[ $response =~ (no|n|N) ]]; then
+  isForWork=false
+else
+  isForWork=true
+fi
+
 for file in .*; do
   if [[ $file == "." || $file == ".." ]]; then
+    continue
+  fi
+  if [[ ($file == ".gitconfig" || $file == ".zprofile") && $isForWork ]]; then
     continue
   fi
   running "~/$file"
