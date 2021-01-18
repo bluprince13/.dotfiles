@@ -6,7 +6,8 @@ Just run `install.sh` to copy all the dotfiles to your homedir and create symlin
 
 ## Set up terminal
 
-1. Install [ITerm2](https://iterm2.com/)
+1. Install [ITerm2](https://iterm2.com/).
+   1. `p10k configure` to install the recommended font.
 2. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) manually with:
 
    `git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh`
