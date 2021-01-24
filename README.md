@@ -23,7 +23,8 @@ symlinks to this repo.
     2. `volta install node yarn`
 7. Install [broot](https://dystroy.org/broot/install/)
    1. `brew install broot`
-
+8. Install [google-cloud-sdk](https://cloud.google.com/sdk/docs/quickstart) to
+   Applications folder.
 
 ### Work config
 

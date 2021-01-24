@@ -121,3 +121,9 @@ source /Users/vipinaj/.config/broot/launcher/bash/br
 # Unlimited history
 HISTSIZE=10000000
 SAVEHIST=10000000
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/Applications/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Applications/google-cloud-sdk/completion.zsh.inc'; fi
