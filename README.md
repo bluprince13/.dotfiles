@@ -9,10 +9,11 @@ symlinks to this repo.
 
 1. Install [ITerm2](https://iterm2.com/).
     1. `p10k configure` to install the recommended font.
+    2. Go to General > Preferences
+       1. Tick `Load preferences from a custom folder`: `/Users/vipinaj/Dropbox/settingssync/iterm2`
+       2. Tick `Save changes to folder when iTerm2 quites`
 2. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) manually with:
-
-    `git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh`
-
+   `git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh`
 3. Install
    [powerlevel10k for oh-my-zsh](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 4. Install custom plugins defined in `.zshrc`.
