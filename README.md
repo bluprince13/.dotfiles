@@ -21,6 +21,9 @@ symlinks to this repo.
 6. Install the following
     1. [volta](https://volta.sh/)
     2. `volta install node yarn`
+7. Install [broot](https://dystroy.org/broot/install/)
+   1. `brew install broot`
+
 
 ### Work config
 

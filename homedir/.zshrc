@@ -114,3 +114,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+source /Users/vipinaj/.config/broot/launcher/bash/br
