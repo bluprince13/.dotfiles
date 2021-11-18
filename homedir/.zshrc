@@ -117,3 +117,7 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 source /Users/vipinaj/.config/broot/launcher/bash/br
+
+# Unlimited history
+HISTSIZE=10000000
+SAVEHIST=10000000
