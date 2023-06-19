@@ -37,8 +37,8 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+export VOLTA_HOME=$HOME/.volta
+export PATH=$VOLTA_HOME/bin:$PATH
 
 # Unlimited history
 HISTSIZE=10000000
@@ -50,7 +50,11 @@ if [ -f '/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/Applications/g
 # The next line enables shell command completion for gcloud.
 if [ -f '/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Applications/google-cloud-sdk/completion.zsh.inc'; fi
 
-export PATH="$PATH:$HOME/Developer/flutter/bin"
+# Flutter
+export PATH=$PATH:$HOME/Developer/flutter/bin
 
 # Homebrew
-export PATH=/opt/homebrew/bin:$PATH'
+export PATH=/opt/homebrew/bin:$PATH
+
+# https://github.com/jdxcode/rtx
+export PATH=~/.local/share/rtx/shims:$PATH
