@@ -58,3 +58,7 @@ export PATH=/opt/homebrew/bin:$PATH
 
 # https://github.com/jdxcode/rtx
 export PATH=~/.local/share/rtx/shims:$PATH
+eval "$(/opt/homebrew//bin/rtx activate zsh)"
+
+# IntelliJ Idea CLI
+export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS":$PATH
